@@ -1,0 +1,13 @@
+header
+{
+    background-image: url(../img/header-background.jpg);
+}
+
+.decor
+{
+    text-decoration: none;
+}
+
+main{
+    text-align: justify;
+}

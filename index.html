@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>PSS Projekt</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid py-4">
+                <div class="container text-center">
+                    <h1 class="text-3 text-primary">Kamerový systém s detekcí SPZ auta - otevírající “závoru”</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="d-inline-flex">
+            <nav class="d-inline-flex flex-column flex-shrink-0 p-3 border-end border-dark bg-light sticky-top" style="width: 300px; height: 100vh;">
+                <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3 mt-4" href="#s1">Popis projektu</a>
+                <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3" href="#s2">Princip funkce</a>
+                <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3" href="#s3">Použité technologie</a>
+                <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3" href="#s4">Závěr</a>
+            </nav>
+
+            <div class="container p-3 pt-5 mx-5">
+                <div class="me-2 fs-5 text-justify pt-3">
+                    <h3>Popis projektu:</h3>
+                    <p>
+                        Projekt by měl fungovat jako jakási brána (např: na parkoviště, k obchodu). 
+                        Auto přijíždí k bráně. Zde kamera naskenuje SPZ auta. 
+                        Pokud se jedná o validní SPZ, tak kamera pošle signál a otevře se závora. 
+                        Auto tak může pokračovat dále.
+                    </p>
+                        <img class="img-fluid" src="img/zavora.jpeg">
+                </div>
+    
+                <div class="me-2 fs-5 text-justify pt-5">
+                    <h3>Princip funkce:</h3>
+                    <p>
+                        Prostor před kamerou je konstantně snímán pomocí makery ESP-32, jež je připojena k Arduinu a přes převaděč k externímu zdroji elektrické energie.
+                        Kamera je připojina i k určité síti, na kterou je připojen i externí počítač, na kterém běží program v jazyku Python.
+                        Program je připojen na IPv4 adresu kamery a bere z ní obraz, který následně zpracovává.
+                        Z videa bere číslice a písmena a pokud se pak jedná o platnou SPZ značku, počítač pošle signál do Arduina, který signál následně předá servo motůrku.
+                        Motůrek po převzetí signálu otevře závoru o 90°.
+                    </p>
+                        <img class="img-fluid" src="img/zapojeni.jpg">
+                </div>
+            </div>
+            
+            <!--Popis projektu: Popište stručně, o co se projektu jedná a jaké jsou jeho hlavní funkce.
+
+            Princip funkce: V této části můžete podrobněji popsat, jak projekt funguje. Vysvětlete, jaké komponenty jsou zapojeny a jak spolu komunikují.
+
+            Použité technologie: V této části můžete vysvětlit, jaké technologie a nástroje jste použili pro vývoj projektu. Zmiňte, jak jste použili Arduino, ESP-32, kameru a servo motůrky.
+
+            Postup vývoje: Pokud chcete, můžete také popsat postup, jakým jste projekt vyvíjeli. Zmiňte, jaké problémy jste museli řešit a jak jste je vyřešili.
+
+            Využití projektu: V této části můžete popsat, kde a jak lze projekt využít. Uveďte příklady, jako jsou například parkovací garáže, parkoviště, průmyslové zóny atd.
+
+            Závěr: V této části můžete shrnout, co jste se naučili a co byste případně udělali jinak při dalším vývoji projektu. Také můžete dát prostor k diskuzi a zpětné vazbě na váš projekt.-->
+        </main>
+
+        <footer class="container-fluid">
+            <hr>
+            <div class="container">
+                <div class="d-flex">
+                    <p class="fw-bold">Kontakt: &nbsp&nbsp&nbsp<a class="fw-normal fst-italic">bohac2@spsejecna.cz</a></p>
+                    <p class="ms-auto"><a class="text-decoration-none text-body" href="https://www.spsejecna.cz">Střední průmyslová škola elektrotechnická</a>, Praha 2, Ječná 30</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/jsc.js"></script>
+    </body>
+</html>
