@@ -12,21 +12,21 @@
         <header>
             <div class="container-fluid py-4">
                 <div class="container text-center">
-                    <h1 class="text-3 text-primary">Kamerový systém s detekcí SPZ auta - otevírající “závoru”</h1>
+                    <h1 class="text-3 text-primary">Kamerový systém s detekcí SPZ auta a otevírající “závoru”</h1>
                 </div>
             </div>
         </header>
 
         <main class="d-inline-flex">
-            <nav class="d-inline-flex flex-column flex-shrink-0 p-3 border-end border-dark bg-light sticky-top" style="width: 300px; height: 100vh;">
+            <nav class="d-xl-inline-flex d-none flex-column flex-shrink-0 p-3 border-end border-dark bg-light sticky-top " style="width: 18%; height: 100vh;">
                 <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3 mt-4" href="#s1">Popis projektu</a>
                 <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3" href="#s2">Princip funkce</a>
                 <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3" href="#s3">Použité technologie</a>
                 <a class="fs-3 text-decoration-none py-2 text-body border border-secondary text-center my-2 rounded-3" href="#s4">Závěr</a>
             </nav>
 
-            <div class="container p-3 pt-5 mx-5">
-                <div class="me-2 fs-5 text-justify pt-3">
+            <div class=" p-3 pt-5 mx-5">
+                <div class="me-2 fs-5 text-justify pt-3" id="s1">
                     <h3>Popis projektu:</h3>
                     <p>
                         Projekt by měl fungovat jako jakási brána (např: na parkoviště, k obchodu). 
@@ -34,10 +34,10 @@
                         Pokud se jedná o validní SPZ, tak kamera pošle signál a otevře se závora. 
                         Auto tak může pokračovat dále.
                     </p>
-                        <img class="img-fluid" src="img/zavora.jpeg">
+                    <img class="img-fluid" src="img/zavora.jpeg">
                 </div>
     
-                <div class="me-2 fs-5 text-justify pt-5">
+                <div class="me-2 fs-5 text-justify pt-5" id="s2">
                     <h3>Princip funkce:</h3>
                     <p>
                         Prostor před kamerou je konstantně snímán pomocí makery ESP-32, jež je připojena k Arduinu a přes převaděč k externímu zdroji elektrické energie.
@@ -46,7 +46,7 @@
                         Z videa bere číslice a písmena a pokud se pak jedná o platnou SPZ značku, počítač pošle signál do Arduina, který signál následně předá servo motůrku.
                         Motůrek po převzetí signálu otevře závoru o 90°.
                     </p>
-                        <img class="img-fluid" src="img/zapojeni.jpg">
+                    <img class="img-fluid" src="img/zapojeni.jpg">
                 </div>
             </div>
             
@@ -66,9 +66,9 @@
         <footer class="container-fluid">
             <hr>
             <div class="container">
-                <div class="d-flex">
-                    <p class="fw-bold">Kontakt: &nbsp&nbsp&nbsp<a class="fw-normal fst-italic">bohac2@spsejecna.cz</a></p>
-                    <p class="ms-auto"><a class="text-decoration-none text-body" href="https://www.spsejecna.cz">Střední průmyslová škola elektrotechnická</a>, Praha 2, Ječná 30</p>
+                <div class="d-flex justify-content-center">
+                    <p class="fw-bold me-5">Kontakt: &nbsp<a class="fw-normal fst-italic">bohac2@spsejecna.cz</a></p>
+                    <p class="ms-5"><a class="text-decoration-none text-body" href="https://www.spsejecna.cz">Střední průmyslová škola elektrotechnická</a>, Praha 2, Ječná 30</p>
                 </div>
             </div>
         </footer>
